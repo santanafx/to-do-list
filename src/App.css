@@ -1,0 +1,29 @@
+body {
+  background-image: url("./imgs/bg-lista.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listaApp {
+  background-color: var(--branco);
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 800px;
+  box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.5);
+}
+
+.listaApp h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.listaApp p {
+  margin-bottom: 10px;
+}

@@ -11,11 +11,11 @@ function App() {
 
   console.log(todos);
   return (
-    <div>
-      <h1>Lista de tarefas</h1>
-      <div>
+    <div className="containerApp">
+      <div className="listaApp">
+        <h1>Lista de tarefas</h1>
         {todos.map((todo) => (
-          <div>
+          <div key={todo.category}>
             <div>
               <p>{todo.text}</p>
               <p>({todo.category})</p>
