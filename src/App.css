@@ -27,3 +27,37 @@ body {
 .listaApp p {
   margin-bottom: 10px;
 }
+
+button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3;
+  background-color: var(--azul);
+  color: var(--branco);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+select {
+  border: 1px solid var(--preto);
+  margin-right: 10px;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--cinza-claro);
+}
+
+input {
+  border: 1px solid var(--preto);
+  padding: 5px 10px;
+  margin-right: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: var(--cinza-claro);
+}
