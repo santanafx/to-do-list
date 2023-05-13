@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import { data } from './db/data';
 import { Todo } from './components/Todo';
 import { FormTodo } from './components/FormTodo';
 import { Context } from './context/GlobalContext';
@@ -11,24 +10,35 @@ function App() {
   const [globalState, dispatch] = React.useContext(Context);
 
   React.useEffect(() => {
-    setTodos(data);
-    console.log(data.length)
+    setTodos(globalState.data);
     dispatch({
       type: 'COMPRIMENTO_DATA',
-      payload: { data: data.length }
+      payload: { data: globalState.data.length }
     })
-  }, [])
+  }, [todos])
 
-  console.log(globalState)
+  const addTodos = (input, category) => {
+    const newData = {
+      id: globalState.data.length + 1,
+      text: input,
+      category: category,
+      isCompleted: false,
+    }
+    globalState.data = [...globalState.data,
+      newData
+    ]
+    setTodos(globalState.data);
+    console.log(globalState.data)
+  }
 
   return (
     <div className="containerApp">
       <div className="listaApp">
         <h1>Lista de tarefas:</h1>
         {todos.map((todo) => (
-          <Todo key={todo.category + todo.id} category={todo.category} text={todo.text} />
+          <Todo key={todo.id} category={todo.category} text={todo.text} />
         ))}
-        <FormTodo />
+        <FormTodo addTodos={addTodos} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const FormTodo = () => {
+export const FormTodo = ({ addTodos }) => {
 
     const [category, setCategory] = React.useState('');
     const [input, setInput] = React.useState('');
@@ -10,7 +10,7 @@ export const FormTodo = () => {
         if (!input || !category) {
             return
         }
-        console.log(category, input)
+        addTodos(input, category);
     }
 
     return (
