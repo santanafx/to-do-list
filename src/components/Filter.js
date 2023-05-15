@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Filter = ({ filter, setFilter }) => {
+export const Filter = ({ filter, setFilter, setSort }) => {
     return (
         <div>
             <h4>Filtrar:</h4>
@@ -11,8 +11,8 @@ export const Filter = ({ filter, setFilter }) => {
             </select>
             <div>
                 <p>Ordem alfabética:</p>
-                <button>Ascendente</button>
-                <button>Descendente</button>
+                <button onClick={() => setSort('Asc')}>Ascendente</button>
+                <button onClick={() => setSort('Desc')}>Descendente</button>
             </div>
         </div>
     )
