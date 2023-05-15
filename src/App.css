@@ -61,3 +61,9 @@ input {
   margin-bottom: 10px;
   background-color: var(--cinza-claro);
 }
+
+hr {
+  background: var(--preto);
+  height: 1px;
+  margin: 10px 0;
+}
